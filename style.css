@@ -1,0 +1,134 @@
+/* General rules applied to the whole page */
+body {
+  font-family: Overpass;
+  color: #404042;
+  font-size: 18px;
+  margin: 0;
+}
+h1, h2, h3 {
+  color: #404042;
+  font-family: Chivo;
+}
+/* Try to highlight some text on the page! 🤩 */
+::selection { 
+  background-color: #106100;
+  color: white;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.banner h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+}
+
+/* Button inside banner */
+.btn-red {
+  background-color: #f51d10;
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 200ms;
+}
+.btn-red:hover {
+  background-color: #ce0000;
+}
+
+/* Container to keep the section to the center of the page */
+.container {
+  width: 900px;
+  margin: 60px auto;
+}
+
+/* div containing all the cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Card */
+.card-white {
+  padding: 16px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
+  border-radius: 4px;
+  transition: 200ms;
+}
+.card-white:hover {
+  transform: scale(1.02);
+}
+.card-white img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
+}
+.card-white h4 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+.card-white p {
+  margin-top: 0;
+  font-size: 15px;
+  text-align: justify;
+}
+
+/* Footer */
+#footer {
+  background-color: #f51d10;
+  color: white;
+  margin-top: 40px;
+  padding: 40px 0;
+  text-align: center;
+  font-weight: lighter;
+}
+#footer .github-link {
+  color: white;
+  font-size: 16px;
+}
+
+/* Specific style for different screen sizes */
+@media (min-width: 300px) {
+  .container {
+    width: 400px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 600px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 900px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
